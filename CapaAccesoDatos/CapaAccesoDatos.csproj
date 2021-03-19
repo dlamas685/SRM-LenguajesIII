@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C5542555-9AC0-4872-8180-153A7317300E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CapaAccesoDatos</RootNamespace>
+    <AssemblyName>CapaAccesoDatos</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="EmpleadoDAO.cs" />
+    <Compile Include="HorariosDAO.cs" />
+    <Compile Include="MedicoDAO.cs" />
+    <Compile Include="PacienteDAO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservaDAO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj">
+      <Project>{6095f467-9c69-464f-9349-003b48a51dbb}</Project>
+      <Name>CapaEntidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="faces\face1.jpg" />
+    <Content Include="faces\face10.jpg" />
+    <Content Include="faces\face11.jpg" />
+    <Content Include="faces\face12.jpg" />
+    <Content Include="faces\face13.jpg" />
+    <Content Include="faces\face14.jpg" />
+    <Content Include="faces\face15.jpg" />
+    <Content Include="faces\face16.jpg" />
+    <Content Include="faces\face17.jpg" />
+    <Content Include="faces\face18.jpg" />
+    <Content Include="faces\face19.jpg" />
+    <Content Include="faces\face2.jpg" />
+    <Content Include="faces\face20.jpg" />
+    <Content Include="faces\face21.jpg" />
+    <Content Include="faces\face22.jpg" />
+    <Content Include="faces\face23.jpg" />
+    <Content Include="faces\face24.jpg" />
+    <Content Include="faces\face25.jpg" />
+    <Content Include="faces\face26.jpg" />
+    <Content Include="faces\face27.jpg" />
+    <Content Include="faces\face28.jpg" />
+    <Content Include="faces\face29.png" />
+    <Content Include="faces\face3.jpg" />
+    <Content Include="faces\face30.jpg" />
+    <Content Include="faces\face4.jpg" />
+    <Content Include="faces\face5.jpg" />
+    <Content Include="faces\face6.jpg" />
+    <Content Include="faces\face7.jpg" />
+    <Content Include="faces\face8.jpg" />
+    <Content Include="faces\face9.jpg" />
+    <Content Include="Fotos\femenino.jpg" />
+    <Content Include="Fotos\masculino.jpg" />
+    <Content Include="script - Pruebas y Limipeza de db.sql" />
+    <Content Include="script USUARIO ADM y ESPECIALIDADES.sql" />
+    <Content Include="script db - 04-12-2019.sql" />
+    <Content Include="script db - 13-12-2019.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="faces\.DS_Store" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

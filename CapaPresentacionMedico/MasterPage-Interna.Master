@@ -1,0 +1,179 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage-Interna.master.cs" Inherits="CapaPresentacionInterna.MasterPage_Interna" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title></title>
+
+    <link href="../Herramientas/bootstrap/css/bootsrap-validaciones.css" rel="stylesheet" />
+    <link href="../Herramientas/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../Herramientas/estilos/css/themify-icons.css" rel="stylesheet" />
+    <link href="../Herramientas/estilos/css/style.css" rel="stylesheet" />
+    <link href="../Herramientas/bootstrap/css/boostrap-glyphicons.css" rel="stylesheet" />
+    <link href="../Herramientas/bootstrap/css/glyphicons.css" rel="stylesheet" />
+    <link href="../Herramientas/estilos/css/vendor.bundle.base.css" rel="stylesheet" />
+    <link href="../Herramientas/bootstrap/css/glyphicons.css" rel="stylesheet" />
+    <link href="../Herramientas/fontawesome/css/all.css" rel="stylesheet" />
+    <link href="../Herramientas/bootstrap/css/w3.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <link href="../Herramientas/bootstrap/css/pagina-maestra.css" rel="stylesheet" />
+    
+    <link href="Herramientas/estilos/css/sleek.css" rel="stylesheet" />
+    <link href="Herramientas/plugins/sweetalert/sweetalert2.css" rel="stylesheet" />
+    <link href="Herramientas/plugins/dataTable/DataTables-1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="Herramientas/plugins/dataTable/Responsive-2.2.3/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+
+    
+
+
+    <script src="Herramientas/plugins/sweetalert/sweetalert2.all.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container-scroller border-0">
+
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center border-right w3-border-light-gray">
+                <a class="navbar-brand brand-logo mr-5" style="font-family: 'Audiowide'; font-size: 30px; font-weight: bold;" href="#">
+                    <i class="fa fa-briefcase-medical w3-text-pink"></i><span class="ml-1 w3-text-pink">FIMA</span></a>
+                <a class="navbar-brand brand-logo-mini" style="font-family: 'Audiowide'; font-size: 30px; font-weight: bold;" href="#">
+                    <i class="fa fa-briefcase-medical w3-text-pink"></i></a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <ul class="navbar-nav mr-lg-2">
+                    <li class="nav-item nav-search d-none d-lg-block">
+                        <div class="search-form w-50">
+                            <div class="input-group bg-light">
+                                <span class="py-2"><i class="fa fa-search"></i></span>
+                                <input type="search" class="form-control " id="search-input" placeholder="Buscador de actividades." autocomplete="off" aria-label="search" aria-describedby="search">
+                                <div id="search-results-container" style="z-index: 1;">
+                                    <ul id="search-results"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link dropdown-toggle w3-hover-light-gray px-3 ml-2" href="#" data-toggle="dropdown" id="profileDropdown">
+                            <asp:Label ID="lblIdEmpleado" CssClass="font-weight-medium d-none" runat="server" Text=""></asp:Label>
+                            <img src="../Herramientas/estilos/imagenes/pp.jpg" class="img-lg" alt="profile" runat="server" id="imgFotoEmpleado" />
+                            <asp:Label ID="lblEmpleado" CssClass="ml-1 w3-text-gray font-weight-medium" runat="server" Text=""></asp:Label>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                            <a class="dropdown-item" runat="server" onserverclick="Unnamed_ServerClick">
+                                <i class="ti-power-off w3-text-pink"></i>
+                                <span class="ml-1">Cerrar Sesión</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                    <span class="fa fa-bar"></span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="container-fluid page-body-wrapper">
+
+
+                <nav class="sidebar sidebar-offcanvas border-right border-right bg-light border-light shadow" id="sidebar">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link w3-text-gray w3-hover-text-pink w3-hover-none" style="font-size: 18px;" href="Inicio_Pagina_Interna.aspx">
+                                <i class="fa fa-home menu-icon mr-1"></i>
+                                <span class="menu-title">INICIO</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link w3-hover-pink rounded-0 w3-text-pink" style="font-size: 18px;" data-toggle="collapse" href="#reservas" aria-expanded="false" aria-controls="reservas">
+                                <i class="fa fa-calendar-check menu-icon mr-1"></i>
+                                <span class="menu-title">GESTIONAR RESERVAS</span>
+                                <i class="menu-arrow float-right"></i>
+                            </a>
+                            <div class="collapse " id="reservas">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item"><a class="nav-link w3-hover-text-black" href="Confirmar_Rechazar_Reservas.aspx">Reservas Pendientes</a></li>
+                                    <li class="nav-item"><a class="nav-link w3-hover-text-black" href="Reservas_Confirmadas.aspx">Reservas Confirmadas</a></li>
+                                    <li class="nav-item"><a class="nav-link w3-hover-text-black" href="Reservas_Rechazadas.aspx">Reservas Rechazadas</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link w3-hover-pink rounded-0 w3-text-pink" style="font-size: 18px;" href="ABM_Medicos.aspx">
+                                <i class="fa fa-user-md menu-icon mr-1"></i>
+                                <span class="menu-title ">GESTIONAR MÉDICOS</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link w3-hover-pink rounded-0 w3-text-pink" style="font-size: 18px;" data-toggle="collapse" href="#agenda" aria-expanded="false" aria-controls="agenda">
+                                <i class="fa fa-calendar-alt menu-icon mr-1"></i>
+                                <span class="menu-title">GESTIONAR AGENDA</span>
+                                <i class="menu-arrow float-right"></i>
+                            </a>
+                            <div class="collapse" id="agenda">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item"><a class="nav-link w3-hover-text-black" href="Crear_Horarios.aspx">Asignar Horarios</a></li>
+                                    <li class="nav-item"><a class="nav-link w3-hover-text-black" href="Ver_Horarios.aspx">Listar Horarios</a></li>
+                                    <li class="nav-item"><a class="nav-link w3-hover-text-black" href="Ver_Agenda_Diaria.aspx">Agenda Diaria</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+
+            <div class="main-panel">
+                <div class="content-wrapper w3-light-grey" style="background-image:url(images/8287.jpg);">
+                    <asp:ContentPlaceHolder ID="cphMaster" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+                <footer class="footer bg-white border-top border-light shadow ">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between ">
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block m-auto">Copyright © 2019 FIMA. Todos los derechos reservados</span>
+                    </div>
+                </footer>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="Herramientas/plugins/jquery/jquery-3.4.1.js"></script>
+
+    <script src="Herramientas/plugins/search/custom.js"></script>
+    <script src="Herramientas/plugins/search/jekyll-search.min.js"></script>
+    <script src="Herramientas/fontawesome/js/all.min.js"></script>
+
+    <script src="Herramientas/estilos/js/vendor.bundle.base.js"></script>
+    <script src="Herramientas/estilos/js/off-canvas.js"></script>
+    <script src="Herramientas/estilos/js/hoverable-collapse.js"></script>
+    <script src="Herramientas/estilos/js/template.js"></script>
+    <script src="Herramientas/estilos/js/todolist.js"></script>
+    <script src="Herramientas/estilos/js/dashboard.js"></script>
+
+    <script src="../Herramientas/estilos/js/dashboard.js"></script>
+
+    <script src="Herramientas/plugins/dataTable/DataTables-1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="Herramientas/plugins/dataTable/DataTables-1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    <script src="Herramientas/plugins/dataTable/Responsive-2.2.3/js/dataTables.responsive.min.js"></script>
+    <script src="Herramientas/plugins/dataTable/Responsive-2.2.3/js/responsive.bootstrap4.min.js"></script>
+
+    <script src="Herramientas/estilos/js/jquery.mask.js"></script>
+
+    <asp:ContentPlaceHolder ID="footer" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

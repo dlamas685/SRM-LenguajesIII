@@ -1,0 +1,64 @@
+[
+
+  {
+    "label": "GESTIONAR MEDICOS",
+    "link": "ABM_Medicos.aspx",
+    "tags": "",
+    "location": "FIMA"
+  },
+
+
+
+  {
+    "label": "ASIGNAR HORARIOS",
+    "link": "Crear_Horarios.aspx",
+    "tags": "",
+    "location": "GESTIONAR AGENDA"
+  },
+
+
+
+  {
+    "label": "LISTAR HORARIOS DE ATENCION",
+    "link": "Ver_Horarios.aspx",
+    "tags": "",
+    "location": "GESTIONAR AGENDA"
+  },
+
+  {
+    "label": "AGENDA DIARIA",
+    "link": "Ver_Agenda_Diaria.aspx",
+    "tags": "",
+    "location": "GESTIONAR AGENDA"
+  },
+
+  {
+    "label": "RESERVAS PENDIENTES",
+    "link": "Confirmar_Rechazar_Reservas.aspx",
+    "tags": "",
+    "location": "GESTIONAR RESERVAS"
+  },
+
+
+  {
+    "label": "RESERVAS CONFIRMADAS",
+    "link": "Reservas_Confirmadas.aspx",
+    "tags": "",
+    "location": "GESTIONAR RESERVAS"
+  },
+
+  {
+    "label": "RESERVAS RECHAZADAS",
+    "link": "Reservas_Rechazadas.aspx",
+    "tags": "",
+    "location": "GESTIONAR RESERVAS"
+  },
+
+  {
+    "label": "REGISTRO DE USUARIOS",
+    "link": "Registro_Usuarios.aspx",
+    "tags": "",
+    "location": "GESTIONAR USUARIOS"
+  }
+
+]

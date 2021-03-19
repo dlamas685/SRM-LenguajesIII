@@ -1,0 +1,128 @@
+.navbar .search-form {
+    position: relative;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    background: transparent;
+}
+
+@media (min-width: 768px) {
+    .navbar .search-form {
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .search-form {
+        padding-left: 1.25rem;
+    }
+}
+
+.navbar .search-form .input-group {
+    margin-bottom: 0;
+}
+
+.navbar .search-form .btn {
+    background: transparent;
+    border: none;
+    color: #8a909d;
+    font-size: 1.625rem;
+    padding: 0.31rem;
+    padding-top: 0.125rem;
+}
+
+    .navbar .search-form .btn:active, .navbar .search-form .btn:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+.navbar .search-form input.form-control {
+    border: none;
+    background: transparent;
+    padding: .5rem 0.94rem;
+}
+
+@media (min-width: 1500px) {
+    .navbar .search-form input.form-control {
+        min-width: 500px;
+    }
+}
+
+.navbar .search-form #search-results-container {
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    box-shadow: 1px 2px 5px #e5e9f2;
+}
+
+    .navbar .search-form #search-results-container li {
+        padding: 20px 30px;
+    }
+
+        .navbar .search-form #search-results-container li .link {
+            font-size: 1rem;
+        }
+
+.header-dark .navbar .search-form .btn,
+.header-dark .navbar .search-form .input-group input.form-control {
+    color: #b7c0cd;
+}
+
+
+.navbar .search-form {
+    margin-right: auto;
+    padding-left: 1.25rem;
+    background: transparent
+}
+
+@media (min-width: 768px) {
+    .navbar .search-form {
+        padding-left: 0
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .search-form {
+        padding-left: 1.25rem
+    }
+}
+
+.navbar .search-form .input-group {
+    margin-bottom: 0
+}
+
+.navbar .search-form .btn {
+    background: transparent;
+    border: none;
+    color: #8a909d;
+    font-size: 1.625rem;
+    padding: 0.31rem;
+    padding-top: 0.125rem
+}
+
+    .navbar .search-form .btn:active, .navbar .search-form .btn:focus {
+        outline: none;
+        box-shadow: none
+    }
+
+.navbar .search-form input.form-control {
+    border: none;
+    background: transparent;
+    padding: .5rem 0.94rem
+}
+
+@media (min-width: 1500px) {
+    .navbar .search-form input.form-control {
+        min-width: 500px
+    }
+}
+
+.header-dark .navbar .search-form .btn, .header-dark .navbar .search-form .input-group input.form-control {
+    color: #b7c0cd
+}
+
+.header-light .navbar .search-form .btn, .header-light .navbar .search-form .input-group input.form-control {
+    color: #8a909d
+}
